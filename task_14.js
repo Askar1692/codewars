@@ -3,19 +3,20 @@ function defineSuit(card) {
     let value2 = 'diamonds';
     let value3 = 'hearts';
     let value4 = 'spades';
-    let cardValue = card.split('');
-    if (cardValue[1] || cardValue[2] === '♣') {
+    let cardValueArr = card.split('');
+    let lasItem = cardValueArr.pop();
+    if (lasItem  === '♣') {
         return value1;
     }
-    if (cardValue[1] || cardValue[2] === '♦') {
+    if (lasItem    === '♦') {
         return value2;
     }
-    if (cardValue[1] || cardValue[2] === '♥') {
+    if (lasItem    === '♥') {
         return value3;
     }
-    if (cardValue[1] || cardValue[2] === '♠') {
+    if (lasItem   === '♠') {
         return value4;
     }
 }
 
-console.log(defineSuit("J♣"));
+console.log(defineSuit("J♥"));
