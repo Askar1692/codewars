@@ -2,7 +2,7 @@
 Найти максимальное число из массива используя циклы.
  */
 
-function sumOfDifferences(arr) {
+function maxValue(arr) {
     let newArr = [];
     for( let i =0; i < arr.length; i++){
         newArr[i] = arr[i];
@@ -16,4 +16,4 @@ function sumOfDifferences(arr) {
     return max;
 }
 
-console.log(sumOfDifferences([101, 10, 15]));
+console.log(maxValue([101, 10, 15]));
